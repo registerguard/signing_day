@@ -5,7 +5,7 @@ Tarbell project configuration
 """
 
 # Google spreadsheet key
-#SPREADSHEET_KEY = "None"
+SPREADSHEET_KEY = "1j7ujZZY3KmEY_RGZGDjxpjBVBo8zvL-3qC12NagJykg"
 
 # Exclude these files from publication
 EXCLUDES = ["*.md", "requirements.txt"]
@@ -17,7 +17,7 @@ EXCLUDES = ["*.md", "requirements.txt"]
 # CREATE_JSON = True
 
 # Get context from a local file or URL. This file can be a CSV or Excel
-# spreadsheet file. Relative, absolute, and remote (http/https) paths can be 
+# spreadsheet file. Relative, absolute, and remote (http/https) paths can be
 # used.
 # CONTEXT_SOURCE_FILE = ""
 
