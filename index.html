@@ -1,0 +1,8 @@
+{% for data in oregon %}
+	<p>
+		<a href="{{ data.hudl_url }}" target="_blank">{{ data.name }}</a><br>
+		{{ data.position }}, {{ data.height }}, {{ data.weight }} <a href="https://twitter.com/{{ data.twitter }}" target="_blank">@{{ data.twitter }}</a><br>
+		{{ data.hometown }}
+	</p>
+	{# {{ data.hudl|safe }} #}
+{% endfor %}
