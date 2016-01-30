@@ -1,8 +1,26 @@
-{% for data in oregon %}
-	<p>
-		<a href="{{ data.hudl_url }}" target="_blank">{{ data.name }}</a><br>
-		{{ data.position }}, {{ data.height }}, {{ data.weight }} <a href="https://twitter.com/{{ data.twitter }}" target="_blank">@{{ data.twitter }}</a><br>
-		{{ data.hometown }}
-	</p>
-	{# {{ data.hudl|safe }} #}
-{% endfor %}
+<div id="story">
+	<p><i class="fa fa-check" style="color: #638008;"></i> - signed&nbsp; <i class="fa fa-book" style="color: #b38f00"></i> - enrolled&nbsp; <i class="fa fa-truck" style="color: #999999;"></i> - juco transfer<p>
+	{% for data in oregon %}
+	<article>
+		<div class="w_wrap">
+			<div class="w_area w_C300fr">
+				<a href="{{ data.hudl_url }}" target="_blank">
+					<img src="http://uploads.registerguard.com/newsroom/signing_day/images/{{ data.image_name }}.png" alt="{{ data.name }}">
+				</a>
+			</div>
+			<div class="w_area w_C300mr">
+				<h1 class="head"><a href="{{ data.hudl_url }}" target="_blank">{{ data.name }}</a></h1>
+				<p class="BodyText-BodyText">
+					{{ data.position }}<br>
+					{{ data.height }}<br>
+					{{ data.weight }} lbs.<br>
+					{{ data.hometown }}<br>
+					<a href="https://twitter.com/{{ data.twitter }}" target="_blank">@{{ data.twitter }}</a><br>
+					{% if data.signed %}<i class="fa fa-check fa-2x" style="color: #638008;"></i>&nbsp;{% endif %}{% if data.enrolled %}<i class="fa fa-book fa-2x" style="color: #b38f00"></i>&nbsp;{% endif %}{% if data.juco_transfer %}<i class="fa fa-truck fa-2x" style="color: #999999;"></i>{% endif %}
+				</p>
+			</div>
+		</div>
+	</article>
+	{% if not loop.last %}<hr>{% endif %}
+	{% endfor %}
+</div> <!-- /#story -->
