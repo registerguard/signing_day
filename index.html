@@ -1,4 +1,5 @@
 <div id="story">
+	<p><b>Updated:</b> {{ datetime_now.strftime('%I:%M %p, %A, %b. %d, %Y, PST') }}
 	<p><i class="fa fa-check" style="color: #638008;"></i> - signed&nbsp; <i class="fa fa-book" style="color: #b38f00"></i> - enrolled&nbsp; <i class="fa fa-truck" style="color: #999999;"></i> - juco transfer<p>
 	{% for data in oregon %}
 	<article>
@@ -16,7 +17,7 @@
 					{{ data.weight }} lbs.<br>
 					{{ data.hometown }}<br>
 					<a href="https://twitter.com/{{ data.twitter }}" target="_blank">@{{ data.twitter }}</a><br>
-					{% if data.signed %}<i class="fa fa-check fa-2x" style="color: #638008;"></i>&nbsp;{% endif %}{% if data.enrolled %}<i class="fa fa-book fa-2x" style="color: #b38f00"></i>&nbsp;{% endif %}{% if data.juco_transfer %}<i class="fa fa-truck fa-2x" style="color: #999999;"></i>{% endif %}
+					{% if data.signed == False %}<i class="fa fa-remove fa-2x" style="color: #ae1a1f;"></i>&nbsp;{% endif %}{% if data.signed %}<i class="fa fa-check fa-2x" style="color: #638008;"></i>&nbsp;{% endif %}{% if data.enrolled %}<i class="fa fa-book fa-2x" style="color: #b38f00"></i>&nbsp;{% endif %}{% if data.juco_transfer %}<i class="fa fa-truck fa-2x" style="color: #999999;"></i>{% endif %}
 				</p>
 			</div>
 		</div>

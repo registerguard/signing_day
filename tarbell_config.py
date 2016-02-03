@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import datetime
+
 """
 Tarbell project configuration
 """
@@ -39,5 +41,6 @@ S3_BUCKETS = {
 # Default template variables
 DEFAULT_CONTEXT = {
     'name': 'signing_day',
-    'title': '2016 Oregon football signing day'
+    'title': '2016 Oregon football signing day',
+    'datetime_now': datetime.datetime.now(),
 }
