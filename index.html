@@ -1,6 +1,9 @@
 <div id="story">
-	<p><b>Updated:</b> {{ datetime_now.strftime('%I:%M %p, %A, %b. %d, %Y, PST') }}
-	<p><i class="fa fa-check" style="color: #638008;"></i> - signed&nbsp; <i class="fa fa-book" style="color: #b38f00"></i> - enrolled&nbsp; <i class="fa fa-truck" style="color: #999999;"></i> - juco transfer<p>
+	<p><b>Updated:</b> {{ datetime_now.strftime('%I:%M %p, %A, %b. %d, %Y, PST') }}</p>
+	<i class="fa fa-check" style="color: #638008;"></i> - signed&nbsp; <i class="fa fa-remove" style="color: #ae1a1f;"></i> - signed by USC&nbsp; <i class="fa fa-book" style="color: #b38f00"></i> - enrolled&nbsp; <i class="fa fa-truck" style="color: #999999;"></i> - transfer<p>
+
+	<hr>
+	
 	{% for data in oregon %}
 	<article>
 		<div class="w_wrap">
